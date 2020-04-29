@@ -1,34 +1,38 @@
 import React from 'react';
-import styled from 'styled-components';
-import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
 
-import { Grid, Cell } from "styled-css-grid";
-import Container from '../components/Container';
 import Section from '../components/Section';
+import Container from '../components/Container';
+import { Flex, Box } from '../components/Grid';
+import Typography from '../components/Typography';
+import Button from '../components/Button';
+import VectorImage from '../components/VectorImage';
+
+import HeroImage from '../images/graphics/mobile-development.inline.svg';
 
 
 const HomeHero = () => {
 
-	const imageData = useStaticQuery(graphql`
-		query {
-      homeGraphic: file(relativePath: { eq: "graphics/banner.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 800) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-	`)
 
 	return(
-		<Section bg="primary" color="#ffffff" py="7">
+		<Section
+			variant="intro"
+			height="80vh"
+			position="relative"
+			overflow="hidden"
+		>
 			<Container>
-				<Grid columns="repeat(auto-fit,minmax(300px,1fr))" gap="3rem">
-			    <Cell>Column1</Cell>
-			    <Cell>Column2</Cell>
-			  </Grid>
+				<Flex
+					alignItems="center"
+				>
+			    <Box width={[ 1, 1/2 ]}>
+			      <Typography tag="h2">Starategic design and technology agency</Typography>
+			      <Typography>Why I say old chap that is spiffing off his nut arse pear shaped plastered Jeffrey bodge barney some dodgy.</Typography>
+			      <Button>Get in Touch</Button>
+			    </Box>
+			    <Box width={[ 1, 1/2 ]}>
+			      <VectorImage image={HeroImage} />
+			    </Box>
+			  </Flex>
 		  </Container>
 		</Section>
 	)

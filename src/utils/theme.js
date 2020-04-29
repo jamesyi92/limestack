@@ -6,7 +6,9 @@ const limestackColors = {
 
 export default { 
 	colors: {
-    ...limestackColors
+    ...limestackColors,
+    light: '#ffffff',
+    dark: '#000000'
   },
   background: {
   	...limestackColors

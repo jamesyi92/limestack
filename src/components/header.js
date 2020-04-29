@@ -3,12 +3,15 @@ import styled from 'styled-components';
 import Container from './Container';
 import Button from './Button';
 
-import LimeStackLogo from '../images/logos/limestack-white.inline.svg';
+import LimeStackLogo from '../images/logos/limestack.inline.svg';
 
 
 const StyledHeader = styled.header`
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
-	padding: 3rem 0;
+	padding: 3.2rem 0;
 	background: transparent;
 `
 
@@ -21,7 +24,6 @@ const Nav = styled.nav`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	color: #ffffff;
 `
 
 const Links = styled.div`
@@ -31,7 +33,7 @@ const Links = styled.div`
 
 const LinkItem = styled.div`
 	&:not(:last-child) {
-		margin-right: 3rem;
+		margin-right: 3.2rem;
 	}
 `
 
